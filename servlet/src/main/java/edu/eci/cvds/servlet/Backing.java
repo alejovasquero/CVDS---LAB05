@@ -9,9 +9,13 @@ import javax.faces.bean.ManagedBean;
 @ApplicationScoped
 public class Backing {
 	private int numeroA;
-	private int intentos;
-	private int puntos;
-	private String estado;
+	private int intentos=0;
+	private int puntos=0;
+	private String estado="No gano";
+	{
+		Random a = new Random();
+		numeroA = a.nextInt(21);
+	}
 	
 	public void guess(int intento) {
 		estado="No gano";
