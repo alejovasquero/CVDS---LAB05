@@ -21,8 +21,10 @@ public class EjemploServlet extends HttpServlet{
     @Override
    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        Writer responseWriter = resp.getWriter();
+	   resp.setContentType("text/html");
        String respuesta = "<Title>BAD REQUEST</Title>";
-       try{
+       
+	   try{
            Optional<Integer> optName = Optional.ofNullable(Integer.parseInt(req.getParameter("id")));
            int id = 0;
 
@@ -36,16 +38,23 @@ public class EjemploServlet extends HttpServlet{
            } 
        } catch(FileNotFoundException e){
            resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
-	   //resp.setStatus(404);
+		   insertMessage("No Encontrado", responseWriter);
        } catch(NumberFormatException e){
+		   
 	   resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-           responseWriter.write(respuesta);
+           insertMessage("Requerimiento inválido", responseWriter);
        } catch(MalformedURLException e){
            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+		   insertMessage("error interno en el servidor", responseWriter);
        } catch(Exception e){
-	   
-	   resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
+		   insertMessage("requerimiento inválido", responseWriter);
+	       resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
        } 
        responseWriter.flush();
    }
+   private void insertMessage(String message,Writer responseWriter) throws IOException{
+		responseWriter.write(String.format("<body><h1>%s</h1></body>", message));
+		
+	}
 }
+	
