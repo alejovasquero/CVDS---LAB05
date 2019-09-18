@@ -3,10 +3,11 @@ package edu.eci.cvds.servlet;
 import java.util.Random;
 
 import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ManagedBean;
 
 @ManagedBean(name = "guessBean")
-@ApplicationScoped
+@SessionScoped
 public class Backing {
 	private int numeroA;
 	private int intentos=0;
