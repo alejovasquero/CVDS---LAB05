@@ -27,16 +27,16 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-            - servlet-{{ checksum "pom.xml" }}
+            - vl-dependencies-{{ checksum "pom.xml" }}
             # fallback to using the latest cache if no exact match is found
-            - servlet-
+            - vl-dependencies-
 
-      - run: mvn dependency:go-offline
-
+      #- run: mvn dependency:go-offline
+      - run: ls -l *
       - save_cache:
           paths:
             - ~/.m2
-          key:servlet-{{ checksum "pom.xml" }}
+          key:vl-dependencies-{{ checksum "pom.xml" }}
 
       # run tests!
       - run: mvn integration-test
