@@ -24,7 +24,7 @@ jobs:
       - checkout
         
       - run: cd servlet
-
+      - run: ls -l *
       # Download and cache dependencies
       - restore_cache:
           keys:
