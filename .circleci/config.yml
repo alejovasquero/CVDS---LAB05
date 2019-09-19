@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - checkout
-        path: ~/repo
+        path: ~/repo/servlet
 
       # Download and cache dependencies
       - restore_cache:
