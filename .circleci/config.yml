@@ -36,7 +36,7 @@ jobs:
       - save_cache:
           paths:
             - ~/.m2
-          key:vl-dependencies-{{ checksum "pom.xml" }}
+          key: vl-dependencies-{{ checksum "pom.xml" }}
 
       # run tests!
       - run: mvn integration-test
