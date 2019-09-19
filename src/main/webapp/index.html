@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript">
+	function validateForm() {
+            var x = document.forms["formulario"]["id"].value;
+            try {
+		var num = parseInt(x);	    
+	    } catch(e){
+	        alert("No es un valor numerico);
+	    }
+	    return false;
+        }    
+
+
+    </script>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+	<body>
+        <h1>Hello World!</h1>
+    </body>
+    <form name="formulario" action="/EjemploServlet" onsubmit="return validateform()" method="post">
+    id: <input type="text" name="id">
+    <input type="submit" value="Submit">
+    </form>
+    
+</html>
