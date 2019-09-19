@@ -23,6 +23,7 @@ jobs:
     steps:
       - checkout
         
+      - run: cd servlet
 
       # Download and cache dependencies
       - restore_cache:
@@ -32,7 +33,6 @@ jobs:
             - vl-dependencies-
 
       #- run: mvn dependency:go-offline
-      - run: ls -l *
       - save_cache:
           paths:
             - ~/.m2
