@@ -22,7 +22,6 @@ public class EjemploServlet extends HttpServlet{
    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        Writer responseWriter = resp.getWriter();
 	   resp.setContentType("text/html");
-       String respuesta = "<Title>BAD REQUEST</Title>";
        
 	   try{
            Optional<Integer> optName = Optional.ofNullable(Integer.parseInt(req.getParameter("id")));
@@ -62,7 +61,6 @@ public class EjemploServlet extends HttpServlet{
 	public void doPost (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
 		Writer responseWriter = resp.getWriter();
 	   resp.setContentType("text/html");
-       String respuesta = "<Title>BAD REQUEST</Title>";
        
 	   try{
            Optional<Integer> optName = Optional.ofNullable(Integer.parseInt(req.getParameter("id")));

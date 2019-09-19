@@ -3,7 +3,6 @@ package edu.eci.cvds.servlet;
 import java.util.Random;
 import java.util.ArrayList;
 
-import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ManagedBean;
 
@@ -11,15 +10,12 @@ import javax.faces.bean.ManagedBean;
 @ManagedBean(name = "guessBean")
 @SessionScoped
 public class Backing {
-	private int numeroA;
+	private Random random = new Random();
+	private int numeroA=random.nextInt(21);
 	private int intentos=0;
 	private int puntos=0;
 	private String estado="No gano";
 	private ArrayList<Integer> fallos=new ArrayList<>();
-	{
-		Random a = new Random();
-		numeroA = a.nextInt(21);
-	}
 	
 	public void guess(int intento) {
 		estado="No gano";
