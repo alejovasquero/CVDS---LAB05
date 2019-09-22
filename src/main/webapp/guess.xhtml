@@ -19,12 +19,20 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
     width:500px;
 	top:100px;
  }
+ form {
+	background-color: yellow;
+ }
+ 
+ panel{
+	background-image: url("https://i.pinimg.com/originals/64/b7/35/64b735fe92c580cad36351a26d4b13c9.jpg");
+	
+ }
  
  </style>
  <h:body>
 
  <h:form id="guess_form">
-	<p:panel id="panel" header="Adivina el número" style="margin-bottom:10px;" bgcolor="black">
+	<p:panel id="panel" header="Adivina el número" style="margin-bottom:10px;" >
         <p:messages id="messages" />
         <h:panelGrid columns="3" cellpadding="10" bgcolor="yellow">
             <p:outputLabel id="Numero" value="#{guessBean.numeroA}"  style="display:none"/>
