@@ -19,6 +19,11 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
     width:500px;
 	top:100px;
  }
+ 
+ .ui-panelgrid td {
+    background-color: transparent !important;
+ }
+ 
  form {
 	background-color: yellow;
  }
@@ -34,7 +39,7 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
  <h:form id="guess_form">
 	<p:panel id="panel" header="Adivina el número" >
         <p:messages id="messages" />
-        <h:panelGrid columns="3" cellpadding="10" bgcolor="yellow">
+        <h:panelGrid columns="3" cellpadding="10" >
             <p:outputLabel id="Numero" value="#{guessBean.numeroA}"  style="display:none"/>
 			<h3></h3> 
 			<h3></h3>
