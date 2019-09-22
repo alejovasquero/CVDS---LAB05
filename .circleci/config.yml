@@ -39,4 +39,4 @@ jobs:
 
       # run tests!
       - run: mvn integration-test -f pom.xml
-      - run mvn test
+      - run: mvn test
