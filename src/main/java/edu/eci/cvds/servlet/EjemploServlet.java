@@ -16,7 +16,7 @@ import java.net.MalformedURLException;
     urlPatterns = "/EjemploServlet"
 )
 public class EjemploServlet extends HttpServlet{
-    static final long serialVersionUID = 34L;
+    public static final long serialVersionUID = 34L;
 
     @Override
    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
