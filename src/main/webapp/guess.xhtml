@@ -28,15 +28,18 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
 	background-color: transparent;
  }
  
- panel{
+ 
+ 
+ .myPanel.ui-panel {
 	background-color: transparent;
+	border: black solid 1px !important;
 	
  }
  
  .headline_class {
   font-weight: bold;
   font-size: 25px;
-}
+  }
 
 
 
@@ -45,7 +48,7 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
  <h:body>
 
  <h:form id="guess_form">
-	<p:panel id="panel" header="Adivina el número" >
+	<p:panel id="panel" header="Adivina el número" styleclass="myPanel">
         <p:messages id="messages" />
         <h:panelGrid columns="3" cellpadding="10" >
             <p:outputLabel id="Numero" value="#{guessBean.numeroA}"  style="display:none" class="headline_class"/>
