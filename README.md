@@ -6,5 +6,5 @@
 
 ## Estado del despliegue  
 
-[![CircleCI](https://circleci.com/gh/alejovasquero/CVDS---LAB05.svg?style=svg)](https://circleci.com/gh/alejovasquero/CVDS---LAB05)
+[![ CircleCI](https://circleci.com/gh/alejovasquero/CVDS---LAB05.svg?style=svg)](https://circleci.com/gh/alejovasquero/CVDS---LAB05)
 
