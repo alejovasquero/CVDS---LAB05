@@ -33,6 +33,14 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
 	
  }
  
+ .headline_class {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+
+
+ 
  </style>
  <h:body>
 
@@ -40,12 +48,12 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
 	<p:panel id="panel" header="Adivina el número" >
         <p:messages id="messages" />
         <h:panelGrid columns="3" cellpadding="10" >
-            <p:outputLabel id="Numero" value="#{guessBean.numeroA}"  style="display:none"/>
+            <p:outputLabel id="Numero" value="#{guessBean.numeroA}"  style="display:none" class="headline_class"/>
 			<h3></h3> 
 			<h3></h3>
             <h:panelGroup />
 			
-			<p:outputLabel for="Intento" id="Ingreso" value="Ingrese su número"  />
+			<p:outputLabel for="Intento" id="Ingreso" value="Ingrese su número" class="headline_class"/>
 			<h:inputText id="Intento" type="number" title="Intento"  binding="#{entrada}"/>
 			
 			
